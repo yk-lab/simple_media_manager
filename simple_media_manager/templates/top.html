@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Topページ
+{% endblock title %}
+
+{% block content %}
+<a href="/upload">Upload</a>
+<ul>
+{% for album in albums %}
+<li><a href="{{ album.get_absolute_url }}">{{ album.name }}</a></li>
+{% endfor %}
+</ul>
+{% endblock content %}

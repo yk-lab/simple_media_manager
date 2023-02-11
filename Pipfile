@@ -1,0 +1,29 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-storages = "*"
+django-filter = "*"
+django-extensions = "*"
+werkzeug = "*"
+django-model-utils = "*"
+boto3 = "*"
+django-glrm = "*"
+django-debug-toolbar = "*"
+django-crispy-forms = "*"
+crispy-bootstrap5 = "*"
+opencv-python = "*"
+opencv-contrib-python = "*"
+numpy = "*"
+pycryptodomex = "*"
+
+[dev-packages]
+flake8 = "*"
+autopep8 = "*"
+isort = "*"
+
+[requires]
+python_version = "3.9"

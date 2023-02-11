@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+アップロード
+{% endblock title %}
+
+{% block content %}
+<div class="card mt-3">
+    <div class="card-body">
+        <h5 class="card-title">アップロード</h5>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="file"/>
+            <button type="submit" class="btn btn-dark">アップロード</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

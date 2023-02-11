@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ album.name }}
+{% endblock title %}
+
+{% block content %}
+<div class="container px-4">
+  <div class="row gx-5">
+  {% for file in album.files.all %}
+  <div class="col">
+      <a href="{{ file.get_absolute_url }}">
+      <figure class="figure">
+        <img
+            lazy
+            src="{{ file.get_thumbnail_url }}"
+            class="figure-img img-fluid rounded"
+            alt="{{ file.name }}"
+        />
+        <figcaption class="figure-caption">{{ file.name }}</figcaption>
+      </figure>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+</div>
+{% endblock content %}
